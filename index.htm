@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+	<title>RoosterLoader</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script src='http://code.jquery.com/jquery-1.8.3.min.js' type="text/javascript"></script>
+	<script src='jquery.zclip.min.js' type="text/javascript"></script>
+	
+	{0} Redirecting <script>window.location="index.py";</script>{1}
+	
+	<script src='js.js'></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1>RoosterLoader</h1>
+
+		<p>Welkom bij RoosterLoader! Kies je klas en het gewenste formaat en druk op
+		"Downloaden" om je rooster te downloaden voor Google Calendar of andere
+		agendaservices!</p>
+		
+		<div id="slider">
+			<form action='index.py/results' method='get'>
+				<input type="text" value="yes" name="download" style="opacity:0; display:none;" />
+				
+				<label class="styled_select" for='faculteit'>
+					<select name="faculty" id='faculteit'>
+						{3}
+					</select>
+				</label><br />
+				
+				<label class="styled_select" for='groep'>
+					<select name="groep" id='groep'>
+						{2}
+					</select>
+				</label><br />
+				
+				<input type='radio' name='format' checked="checked" value='ics' id=
+				'ics' /><label for='ics'>
+				<span></span>
+				ICS + Webcal link (Geschikt voor GMail, Outlook, iCalendar,
+				Hotmail...)</label><br />
+				
+				<input type='radio' name='format' value='icsnz' id=
+				'icsnz' /><label for='icsnz'>
+				<span></span>
+				ICS + Webcal link zonder zelfstandige uren.</label><br />
+								
+				<input type='radio' name='format' value='csv' id='csv' />
+				<label for='csv'>
+				<span></span>
+				CSV (Voor analyse)
+				</label><br />
+				
+				<input type='submit' value="Download"/>
+				<button class="to_help" type="button"> Help! </button>
+				<button class="to_disclaimer" type="button"> Disclaimer </button>
+			</form>
+			<div id="success">
+				<h2> Succes! </h2>
+				<p>Je rooster wordt nu gedownload.
+				Kijk <a href='#' class='to_help'>hier</a>
+				voor meer informatie over de roosters.
+				</p>
+				<p style="display:none;" id="webcal_block"> Je kan er ook voor kiezen om je te abboneren op de WebCal service met deze link:
+					<br/>
+					<input type="text" id="webcal_link" value="neger" />
+					<button id="copy_webcal_button"> Kopieer </button>
+				</p>
+			</div>
+			<div id="help">
+				<h2> Hulp nodig? </h2>
+				<p>
+					<strong>Q: Wie heeft dit gemaakt?</strong><br/>
+					A: RoosterLoader is gemaakt door <a href="http://www.stephanheijl.com">Stephan Heijl</a> uit Bi2. 
+					Mocht je hier iets aan gehad hebben, onthoud dan dat 'ie nooit vies is van een kop koffie of een pilsje ;)
+				</p><p>
+					<strong>Q: Hoe krijg ik mijn bestand in mijn agenda?</strong><br/>
+					A: Kijk <a href='http://bioinformatician.stephanheijl.com/discussion/10/roosterloader-2-0' title='Importeren in je agenda'>hier</a>
+					voor informatie over het importeren in je agenda applicatie.				
+				</p><p>
+					<strong>Q: Help, de tijden op mijn kalender kloppen niet!</strong><br/>
+					Het kan zijn dat de tijdzone van je kalender niet klopt met die van Nederland (GMT+1).
+				</p>
+			</div>
+			<div id="disclaimer">
+				<h2> Disclaimer </h2>
+				<p>
+					THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+					OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+					AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+					CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+					DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+					DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+					WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+					WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+				</p>
+			</div>
+			<img src="Rooster.png" style='display:none;'/>
+			<div class="revert back_button">←</div>
+		</div>
+	</div>
+</body>
+</html>
