@@ -7,8 +7,8 @@ Students with a custom interface to their school schedules. It scrapes the infor
 Currently available
 -------------------
 
-The most stable version (production) is currently reachable at:
-http://cytosine.nl/~stephan/RoosterLoader/index.py
+The most stable version (production) is currently reachable at 
+[the cytosine.nl server](http://cytosine.nl/~stephan/RoosterLoader/index.py).
 
-The most recent version (test) is found on:
-http://54.200.134.220/
+The most recent version (test) is found on 
+[the Amazon ec2 instance](http://54.200.134.220/RoosterLoader/index.py).
